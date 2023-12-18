@@ -11,7 +11,9 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
 
 </head>
-<body>
+<body>  <button onclick="launch()" >
+    install
+</button>
 <div class="bg-red-300 w-80  mt-28 mx-5 p-2 rounded"><input id="input" class=" w-full rounded " />
   <div class="buttons grid grid-cols-5 ">
    
@@ -40,6 +42,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css
 </div>
   <script  src="./script.js"></script>
   <script >
+    let deferredevent
+  window.addEventListener('beforeinstallpromt', e=>{
+    e.preventDefault();
+    alert("app can be installed");
+    deferredevent=e;
+  });
+  
+  launch = () =>{
+    deferredevent.prompt();
+  }; 
 if ('serviceWorker' in navigator) {
    navigator.serviceWorker.register("./Serviceworker.js");
 } 
