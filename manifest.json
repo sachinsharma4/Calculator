@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+
+  "icons": [
+    {
+      "src": "./logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "id": "calculator-v10000",
+  "start_url": "./index.html",
+  "background_color": "#F4B025",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#3367D6"
+
+}
